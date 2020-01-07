@@ -1,8 +1,8 @@
 <?php
 
-namespace wxwork\common;
+namespace shophy\wxwork\common;
 
-use wxwork\exception\ParameterException;
+use shophy\wxwork\exception\ParameterException;
 
 class Utils { 
 

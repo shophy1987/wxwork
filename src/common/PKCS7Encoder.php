@@ -1,6 +1,6 @@
 <?php
 
-namespace wxwork\common;
+namespace shophy\wxwork\common;
 
 /**
  * PKCS7Encoder class

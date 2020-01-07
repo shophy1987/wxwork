@@ -1,6 +1,6 @@
 <?php
 
-namespace wxwork\common;
+namespace shophy\wxwork\common;
 
 /**
  * 1.第三方回复加密消息给公众平台；

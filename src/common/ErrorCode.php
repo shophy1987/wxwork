@@ -1,6 +1,6 @@
 <?php
 
-namespace wxwork\common;
+namespace shophy\wxwork\common;
 
 /**
  * error code 说明.

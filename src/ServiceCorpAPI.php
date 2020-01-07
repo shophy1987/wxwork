@@ -1,15 +1,15 @@
 <?php
 
-namespace wxwork;
+namespace shophy\wxwork;
 
-use wxwork\common\Utils;
-use wxwork\common\HttpUtils;
+use shophy\wxwork\common\Utils;
+use shophy\wxwork\common\HttpUtils;
 
-use wxwork\structs\GetPermanentCodeRsp;
-use wxwork\structs\GetAuthInfoRsp;
-use wxwork\structs\GetAdminListRsp;
-use wxwork\structs\GetUserinfoBy3rdRsp;
-use wxwork\structs\GetUserDetailBy3rdRsp;
+use shophy\wxwork\structs\GetPermanentCodeRsp;
+use shophy\wxwork\structs\GetAuthInfoRsp;
+use shophy\wxwork\structs\GetAdminListRsp;
+use shophy\wxwork\structs\GetUserinfoBy3rdRsp;
+use shophy\wxwork\structs\GetUserDetailBy3rdRsp;
 
 class ServiceCorpAPI extends CorpAPI 
 {

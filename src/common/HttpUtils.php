@@ -1,10 +1,10 @@
 <?php
 
-namespace wxwork\common;
+namespace shophy\wxwork\common;
 
-use wxwork\exception\HttpException;
-use wxwork\exception\NetWorkException;
-use wxwork\exception\InternalException;
+use shophy\wxwork\exception\HttpException;
+use shophy\wxwork\exception\NetWorkException;
+use shophy\wxwork\exception\InternalException;
 
 class HttpUtils
 {

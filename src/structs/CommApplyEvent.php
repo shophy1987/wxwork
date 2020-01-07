@@ -1,8 +1,8 @@
 <?php
 
-namespace wxwork\structs;
+namespace shophy\wxwork\structs;
 
-use wxwork\common\Utils;
+use shophy\wxwork\common\Utils;
 
 class CommApplyEvent { 
     public $apply_data = null; // string TODO, 文档太烂，看不懂, 无法解析！！待相关人员更新

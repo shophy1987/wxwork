@@ -1,9 +1,9 @@
 <?php
 
-namespace wxwork\structs;
+namespace shophy\wxwork\structs;
 
-use wxwork\common\Utils;
-use wxwork\exception\QyApiException;
+use shophy\wxwork\common\Utils;
+use shophy\wxwork\exception\QyApiException;
 
 class Message 
 { 

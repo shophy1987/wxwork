@@ -1,8 +1,8 @@
 <?php
 
-namespace wxwork\structs;
+namespace shophy\wxwork\structs;
 
-use wxwork\common\Utils;
+use shophy\wxwork\common\Utils;
 
 class GetUserDetailBy3rdRsp
 { 

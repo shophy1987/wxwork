@@ -1,11 +1,11 @@
 <?php
 
-namespace wxwork;
+namespace shophy\wxwork;
 
-use wxwork\common\Utils;
-use wxwork\common\HttpUtils;
-use wxwork\exception\QyApiException;
-use wxwork\exception\ParameterException;
+use shophy\wxwork\common\Utils;
+use shophy\wxwork\common\HttpUtils;
+use shophy\wxwork\exception\QyApiException;
+use shophy\wxwork\exception\ParameterException;
 
 abstract class API
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace wxwork\structs;
+namespace shophy\wxwork\structs;
 
 class SendWorkWxRedpackRsp
 { 

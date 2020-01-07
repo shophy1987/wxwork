@@ -1,8 +1,8 @@
 <?php
 
-namespace wxwork\structs;
+namespace shophy\wxwork\structs;
 
-use wxwork\common\Utils;
+use shophy\wxwork\common\Utils;
 
 class CheckinGroup { 
     public $grouptype = null; // uint,  1 固定  2自定义  3自由签到

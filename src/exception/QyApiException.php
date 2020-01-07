@@ -1,6 +1,6 @@
 <?php
 
-namespace wxwork\exception;
+namespace shophy\wxwork\exception;
 
 class QyApiException extends Exception
 {

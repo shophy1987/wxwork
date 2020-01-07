@@ -1,15 +1,15 @@
 <?php
 
-namespace wxwork;
+namespace shophy\wxwork;
 
-use wxwork\common\Utils;
-use wxwork\common\HttpUtils;
+use shophy\wxwork\common\Utils;
+use shophy\wxwork\common\HttpUtils;
 
-use wxwork\structs\GetLoginInfoRsp;
-use wxwork\structs\GetRegisterCodeReq;
-use wxwork\structs\GetRegisterInfoRsp;
-use wxwork\structs\SetAgentScopeReq;
-use wxwork\structs\SetAgentScopeRsp;
+use shophy\wxwork\structs\GetLoginInfoRsp;
+use shophy\wxwork\structs\GetRegisterCodeReq;
+use shophy\wxwork\structs\GetRegisterInfoRsp;
+use shophy\wxwork\structs\SetAgentScopeReq;
+use shophy\wxwork\structs\SetAgentScopeRsp;
 
 class ServiceProviderAPI extends API
 {

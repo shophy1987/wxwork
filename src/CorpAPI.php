@@ -1,35 +1,35 @@
 <?php
 
-namespace wxwork;
+namespace shophy\wxwork;
 
-use wxwork\common\Utils;
-use wxwork\common\HttpUtils;
-use wxwork\exception\SysException;
-use wxwork\exception\QyApiException;
-use wxwork\exception\ParameterException;
+use shophy\wxwork\common\Utils;
+use shophy\wxwork\common\HttpUtils;
+use shophy\wxwork\exception\SysException;
+use shophy\wxwork\exception\QyApiException;
+use shophy\wxwork\exception\ParameterException;
 
-use wxwork\structs\User;
-use wxwork\structs\Department;
-use wxwork\structs\Tag;
-use wxwork\structs\Batch;
-use wxwork\structs\BatchJobArgs;
-use wxwork\structs\Agent;
-use wxwork\structs\Menu;
-use wxwork\structs\Message;
-use wxwork\structs\UserInfoByCode;
-use wxwork\structs\UserDetailByUserTicket;
-use wxwork\structs\CheckinOption;
-use wxwork\structs\CheckinDataList;
-use wxwork\structs\ApprovalDataList;
-use wxwork\structs\SendWorkWxRedpackReq;
-use wxwork\structs\QueryWorkWxRedpackReq;
-use wxwork\structs\PayWwSptrans2PocketReq;
-use wxwork\structs\QueryWwSptrans2PocketReq;
-use wxwork\structs\BatchUpdateInvoiceStatusReq;
-use wxwork\structs\BatchGetInvoiceInfoReq;
-use wxwork\structs\Student;
-use wxwork\structs\Parents;
-use wxwork\structs\SchoolDepartment;
+use shophy\wxwork\structs\User;
+use shophy\wxwork\structs\Department;
+use shophy\wxwork\structs\Tag;
+use shophy\wxwork\structs\Batch;
+use shophy\wxwork\structs\BatchJobArgs;
+use shophy\wxwork\structs\Agent;
+use shophy\wxwork\structs\Menu;
+use shophy\wxwork\structs\Message;
+use shophy\wxwork\structs\UserInfoByCode;
+use shophy\wxwork\structs\UserDetailByUserTicket;
+use shophy\wxwork\structs\CheckinOption;
+use shophy\wxwork\structs\CheckinDataList;
+use shophy\wxwork\structs\ApprovalDataList;
+use shophy\wxwork\structs\SendWorkWxRedpackReq;
+use shophy\wxwork\structs\QueryWorkWxRedpackReq;
+use shophy\wxwork\structs\PayWwSptrans2PocketReq;
+use shophy\wxwork\structs\QueryWwSptrans2PocketReq;
+use shophy\wxwork\structs\BatchUpdateInvoiceStatusReq;
+use shophy\wxwork\structs\BatchGetInvoiceInfoReq;
+use shophy\wxwork\structs\Student;
+use shophy\wxwork\structs\Parents;
+use shophy\wxwork\structs\SchoolDepartment;
 
 class CorpAPI extends API
 {
