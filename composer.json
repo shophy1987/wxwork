@@ -1,0 +1,11 @@
+{
+    "name": "shophy/wxwork",
+    "description": "wxwork-php-sdk",
+    "authors": [
+        {
+            "name": "shophy",
+            "email": "shophy@kuningkeji.com"
+        }
+    ],
+    "require": {}
+}
