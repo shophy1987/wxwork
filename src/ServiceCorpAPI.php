@@ -5,10 +5,11 @@ namespace shophy\wxwork;
 use shophy\wxwork\common\Utils;
 use shophy\wxwork\common\HttpUtils;
 
-use shophy\wxwork\structs\GetPermanentCodeRsp;
 use shophy\wxwork\structs\GetAuthInfoRsp;
 use shophy\wxwork\structs\GetAdminListRsp;
+use shophy\wxwork\structs\SetSessionInfoReq;
 use shophy\wxwork\structs\GetUserinfoBy3rdRsp;
+use shophy\wxwork\structs\GetPermanentCodeRsp;
 use shophy\wxwork\structs\GetUserDetailBy3rdRsp;
 
 class ServiceCorpAPI extends CorpAPI 
@@ -117,7 +118,7 @@ class ServiceCorpAPI extends CorpAPI
      */
     public function GetPreAuthCode()
     { 
-        self::_HttpCall(self::GET_PRE_AUTH_CODE, 'GET', null); 
+        self::_HttpCall(self::GET_PRE_AUTH_CODE, 'GET', []); 
         return $this->rspJson["pre_auth_code"];
     } 
 
@@ -225,5 +226,4 @@ class ServiceCorpAPI extends CorpAPI
         self::_HttpCall(self::GET_USER_DETAIL_BY_3RD, 'POST', $args);
         return GetUserDetailBy3rdRsp::ParseFromArray($this->rspJson);
     }
-
 }

@@ -25,7 +25,7 @@ class HttpUtils
 	    $is_list = false;
 	    $keys = array_keys ( $arr );
 	    $max_length = count ( $arr ) - 1;
-	    if (($keys [0] === 0) && ($keys [$max_length] === $max_length )) {
+	    if (isset($keys[0]) && ($keys [0] === 0) && ($keys [$max_length] === $max_length )) {
 	        $is_list = true;
 	        for($i = 0; $i < count ( $keys ); $i ++) {
 	            if ($i != $keys [$i]) {

@@ -173,6 +173,4 @@ class WXBizMsgCrypt
 
 		return ErrorCode::$OK;
 	}
-
 }
-

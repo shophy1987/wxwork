@@ -29,8 +29,4 @@ class SHA1
 			return array(ErrorCode::$ComputeSignatureError, null);
 		}
 	}
-
 }
-
-
-?>
