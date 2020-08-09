@@ -10,6 +10,7 @@ class Relation
     public $mobile = null; // string
     public $relation = null; // string
     public $is_subscribe = null; // uint
+    public $external_userid = null; // string
 
     static public function Array2Relation($arr)
     {
@@ -18,6 +19,7 @@ class Relation
         $relation->mobile = Utils::arrayGet($arr, "mobile");
         $relation->relation = Utils::arrayGet($arr, "relation");
         $relation->is_subscribe = Utils::arrayGet($arr, "is_subscribe");
+        $relation->external_userid = Utils::arrayGet($arr, "external_userid");
 
         return $relation;
     }
