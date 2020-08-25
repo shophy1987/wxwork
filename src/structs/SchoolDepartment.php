@@ -53,7 +53,7 @@ class SchoolDepartment
         if (array_key_exists("department_admins", $arr)) { 
             if (is_array($arr["department_admins"])) {
                 foreach ($arr["department_admins"] as $item) {
-                    $parent->department_admins[] = new DepartmentAdmin($item["userid"], $item["type"]);
+                    $department->department_admins[] = new DepartmentAdmin($item["userid"], $item["type"], $item["subject"] ?? '');
                 }
             }
         }
