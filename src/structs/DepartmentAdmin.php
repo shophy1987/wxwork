@@ -10,10 +10,11 @@ class DepartmentAdmin
     public $type = null; // uint
     public $subject = null; // string
 
-    public function __construct($userid = null, $type = null)
+    public function __construct($userid = null, $type = null, $subject=null)
 	{
 		$this->userid = $userid;
-		$this->type = $type;
+        $this->type = $type;
+        $this->subject = $subject;
     }
     
     static public function DepartmentAdmin2Array($department_admins)
