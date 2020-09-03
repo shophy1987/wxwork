@@ -8,7 +8,8 @@ class Parents
 {
     public $userid = null; // string
     public $mobile = null; // srting
-    public $to_invite = null;  // uint array
+    public $is_subscribe = null;  // uint
+    public $external_userid = null; // string
     public $children = null; // Children array
 
     static public function Parents2Array($parent)
@@ -17,7 +18,8 @@ class Parents
 
 		Utils::setIfNotNull($parent->userid, "parent_userid", $args);
 		Utils::setIfNotNull($parent->mobile, "mobile", $args);
-        Utils::setIfNotNull($parent->to_invite, "to_invite", $args);
+        Utils::setIfNotNull($parent->is_subscribe, "is_subscribe", $args);
+        Utils::setIfNotNull($parent->external_userid, "external_userid", $args);
 
         if (is_array($parent->children)) {
             $children = [];
@@ -35,7 +37,8 @@ class Parents
 		$parent = new Parents();
         $parent->userid = Utils::arrayGet($arr, "parent_userid");
         $parent->mobile = Utils::arrayGet($arr, "mobile");
-        $parent->to_invite = Utils::arrayGet($arr, "to_invite");
+        $parent->is_subscribe = Utils::arrayGet($arr, "is_subscribe");
+        $parent->external_userid = Utils::arrayGet($arr, "external_userid");
 
         if (array_key_exists("children", $arr)) { 
             if (is_array($arr["children"])) {
