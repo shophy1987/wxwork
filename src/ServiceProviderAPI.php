@@ -26,7 +26,7 @@ class ServiceProviderAPI extends API
         $this->provider_secret = $provider_secret;
     }
 
-    protected function GetProviderAccessToken()
+    public function GetProviderAccessToken()
     { 
         if ( ! Utils::notEmptyStr($this->provider_access_token)) { 
             $this->RefreshProviderAccessToken();

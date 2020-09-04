@@ -44,7 +44,7 @@ class ServiceCorpAPI extends CorpAPI
      *
      * @return : string
      */
-    public function RefreshAccessToken($bflush=false)
+    protected function RefreshAccessToken($bflush=false)
     {
         Utils::checkNotEmptyStr($this->authCorpId, "auth_corpid");
         Utils::checkNotEmptyStr($this->permanentCode, "permanent_code");
@@ -75,7 +75,7 @@ class ServiceCorpAPI extends CorpAPI
      *
      * @return : string
      */
-    protected function GetSuiteAccessToken()
+    public function GetSuiteAccessToken()
     { 
         if ( ! Utils::notEmptyStr($this->suiteAccessToken)) { 
             $this->RefreshSuiteAccessToken();
