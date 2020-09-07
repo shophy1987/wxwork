@@ -105,6 +105,9 @@ abstract class API
 
     const SCHOOL_SET_SYNC_MODE = '/cgi-bin/school/set_arch_sync_mode?access_token=ACCESS_TOKEN';
 
+    const MINIPROGRAM_CODETOSESSION = '/cgi-bin/miniprogram/jscode2session?access_token=ACCESS_TOKEN';
+    const EXTERNAL_CONTACT_GET = '/cgi-bin/externalcontact/get?access_token=ACCESS_TOKEN';
+
     protected function GetAccessToken() { }
     protected function RefreshAccessToken($bflush=false) { }
 

@@ -30,6 +30,8 @@ use shophy\wxwork\structs\BatchGetInvoiceInfoReq;
 use shophy\wxwork\structs\Student;
 use shophy\wxwork\structs\Parents;
 use shophy\wxwork\structs\SchoolDepartment;
+use shophy\wxwork\structs\ExternalContact;
+use shophy\wxwork\structs\CodeSession;
 
 class CorpAPI extends API
 {
@@ -1405,5 +1407,27 @@ class CorpAPI extends API
     {
         Utils::checkIsUInt($arch_sync_mode, "arch_sync_mode"); 
         self::_HttpCall(self::SCHOOL_SET_SYNC_MODE, 'POST', array('arch_sync_mode'=>$arch_sync_mode));
+    }
+
+    /**
+     * code2Session
+     * @param $external_userid 外部联系人userid
+     */
+    public function JscodeToSession($js_code)
+    {
+        Utils::checkNotEmptyStr($js_code, "js_code");
+        self::_HttpCall(self::MINIPROGRAM_CODETOSESSION, 'GET', ['js_code' => $js_code, 'grant_type' => 'authorization_code']);
+        return CodeSession::Array2CodeSession($this->rspJson);
+    }
+
+    /**
+     * 获取客户详情
+     * @param $external_userid 外部联系人userid
+     */
+    public function ExternalContactGet($external_userid)
+    {
+        Utils::checkNotEmptyStr($external_userid, "external_userid");
+        self::_HttpCall(self::EXTERNAL_CONTACT_GET, 'GET', array('external_userid' => $external_userid));
+        return ExternalContact::Array2ExternalContact($this->rspJson);
     }
 }
