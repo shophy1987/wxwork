@@ -11,6 +11,7 @@ use shophy\wxwork\structs\SetSessionInfoReq;
 use shophy\wxwork\structs\GetUserinfoBy3rdRsp;
 use shophy\wxwork\structs\GetPermanentCodeRsp;
 use shophy\wxwork\structs\GetUserDetailBy3rdRsp;
+use shophy\wxwork\structs\CodeSession;
 
 class ServiceCorpAPI extends CorpAPI 
 {
@@ -225,5 +226,16 @@ class ServiceCorpAPI extends CorpAPI
         $args = array("user_ticket" => $user_ticket); 
         self::_HttpCall(self::GET_USER_DETAIL_BY_3RD, 'POST', $args);
         return GetUserDetailBy3rdRsp::ParseFromArray($this->rspJson);
+    }
+
+    /**
+     * code2Session
+     * @param $external_userid 外部联系人userid
+     */
+    public function JscodeToSession($js_code)
+    {
+        Utils::checkNotEmptyStr($js_code, "js_code");
+        self::_HttpCall(self::MINIPROGRAM_CODETOSESSION_SERVICE, 'GET', ['js_code' => $js_code, 'grant_type' => 'authorization_code']);
+        return CodeSession::Array2CodeSession($this->rspJson);
     }
 }
