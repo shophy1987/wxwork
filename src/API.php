@@ -107,7 +107,9 @@ abstract class API
 
     const MINIPROGRAM_CODETOSESSION = '/cgi-bin/miniprogram/jscode2session?access_token=ACCESS_TOKEN';
     const MINIPROGRAM_CODETOSESSION_SERVICE = '/cgi-bin/service/miniprogram/jscode2session?suite_access_token=SUITE_ACCESS_TOKEN';
+
     const EXTERNAL_CONTACT_GET = '/cgi-bin/externalcontact/get?access_token=ACCESS_TOKEN';
+    const EXTERNAL_MESSAGE_SEND = '/cgi-bin/externalcontact/message/send?access_token=ACCESS_TOKEN';
 
     protected function GetAccessToken() { }
     protected function RefreshAccessToken($bflush=false) { }

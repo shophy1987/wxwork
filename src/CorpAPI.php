@@ -16,6 +16,7 @@ use shophy\wxwork\structs\BatchJobArgs;
 use shophy\wxwork\structs\Agent;
 use shophy\wxwork\structs\Menu;
 use shophy\wxwork\structs\Message;
+use shophy\wxwork\structs\ExternalMessage;
 use shophy\wxwork\structs\UserInfoByCode;
 use shophy\wxwork\structs\UserDetailByUserTicket;
 use shophy\wxwork\structs\CheckinOption;
@@ -1430,4 +1431,32 @@ class CorpAPI extends API
         self::_HttpCall(self::EXTERNAL_CONTACT_GET, 'GET', array('external_userid' => $external_userid));
         return ExternalContact::Array2ExternalContact($this->rspJson);
     }
+
+    /**
+     * @brief ExternalMessageSend : 发送学校通知
+     *
+     * @link https://work.weixin.qq.com/api/doc/90001/90143/92291
+     *
+     * @param $message : ExternalMessage
+     * @param $invalidExternalUserList : string array
+     * @param $invalidParentUseridList : string array
+     * @param $invalidStudentUseridList : string array
+     * @param $invalidPartyIdList : uint array
+     * @param $invalidTagIdList : uint array
+     *
+     * @return 
+     */
+    public function ExternalMessageSend(ExternalMessage $message, &$invalidExternalUserList, &$invalidParentUseridList, &$invalidStudentUseridList, &$invalidPartyIdList, &$invalidTagIdList)
+    {
+        $message->CheckMessageSendArgs(); 
+        $args = $message->Message2Array();
+
+        self::_HttpCall(self::EXTERNAL_MESSAGE_SEND, 'POST', $args); 
+
+        $invalidTagIdList = utils::arrayGet($this->rspJson, "invalid_tag");
+        $invalidPartyIdList = utils::arrayGet($this->rspJson, "invalid_party");
+        $invalidExternalUserList = utils::arrayGet($this->rspJson, "invalid_external_user");
+        $invalidParentUseridList = utils::arrayGet($this->rspJson, "invalid_parent_userid");
+        $invalidStudentUseridList = utils::arrayGet($this->rspJson, "invalid_student_userid");
+    } 
 }
